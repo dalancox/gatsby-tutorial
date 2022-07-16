@@ -1,0 +1,233 @@
+/* Footer */
+
+/* @font-face {    
+    font-family: "HK Grotesk";
+    src: url('../../fonts/hk-grotesk/HKGrotesk-Medium.otf');
+}
+
+@font-face {
+    font-family: "HK Grotesk light";
+    src: url('../../fonts/hk-grotesk/HKGrotesk-Light.otf');
+} */
+
+.mobile-footer-view {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.block {
+    display: block;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-gap {
+    column-gap: 20px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+footer {
+    --tw-bg-opacity: 1;
+    background-color: rgb(251 248 245/var(--tw-bg-opacity));
+}
+
+footer h3 {
+    font-family: "HK Grotesk";
+    font-style: normal;
+    font-size: 16px;
+    color: #332C26;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+
+
+footer section:nth-child(1) {
+    padding-top: 48px;
+    padding-bottom: 40px;
+}
+
+footer section:nth-child(2) {
+    padding-bottom: 18px;
+}
+
+.footer-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.footer-block {
+    min-width: 140px;
+}
+
+.nav-links {
+    font-family: "HK Grotesk";
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 24px;
+    
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links a:visited {
+    color: #332C26CC;
+    color: rgba(51, 44, 38, 0.8);
+}
+
+.nav-links a {
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-family: "HK Grotesk light";
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    width: 35px;
+    font-size: 18px;
+}
+
+.social-links:visited {
+    color: black;
+}
+
+.bottom-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-footer a {
+    font-family: "HK Grotesk";
+    font-size: .72rem;
+    font-weight: 50;
+    margin-right: 13px;
+    margin-bottom: 25px;
+    letter-spacing: .75px;
+    opacity: 0.7;
+}
+
+.bottom-footer a:visited {
+    color: #332C26CC;
+}
+
+@media only screen and (max-width: 765px) {
+    
+    .footer-block {
+        display: none;
+    }
+
+    footer section:nth-child(1) {
+        display: none;
+    }
+
+    .mobile-footer-view {
+        display: block;
+    }
+
+    .mobile-footer-view .nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 15px;
+    }
+
+    .mobile-footer-view .nav h1 {
+        margin: 1rem 0 1rem 0;
+    }
+
+    .mobile-footer-view i {
+        font-size: 25px;
+    }
+
+    .mobile-footer-view .about, .learn, .help {
+        cursor: pointer;
+    }
+
+    .mobile-footer-view .nav h1, i {
+        font-size: 16px;
+        color: #484848;
+    }
+
+    .mobile-footer-view .nav-options {
+        display: flex;
+        width: 100%;
+        max-height: 0;
+        padding-left: 15px;
+        overflow: hidden;
+        flex-direction: column;
+        transition: max-height 0.15s ease-out;
+    }
+
+    .mobile-footer-view .nav-options a {
+        font-size: 14px;
+        color: #484848;
+        line-height: 36px;
+    }
+
+    .mobile-footer-view .nav-options.active {
+        max-height: 500px;
+        transition: max-height 0.25s ease-in;
+    }
+
+    .mobile-footer-view .header {
+        padding: 1rem 0 1rem 0;
+    }
+
+    .mobile-footer-view .app .app-links {
+        display: flex;
+        padding-left: 15px;
+        gap: 32px;
+    }
+
+    .mobile-social {
+        display: flex;
+        gap: 24px;
+    }
+
+    .mobile-social i {
+        font-size: 20px;
+    }
+
+  }
+
+/* End Footer */

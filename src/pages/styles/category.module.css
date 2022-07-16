@@ -1,0 +1,37 @@
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-lx);
+}
+
+.sub-title {
+    margin-bottom: 1rem;
+}
+
+.break-line {
+    border-bottom: 1px solid #ddd;
+}
+
+.articles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.sub-articles {
+    background-color: #fbf8f5;
+    width: 385px;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.sub-articles h4 {
+    margin: 0;
+}
+
+.sub-articles p {
+    font-size: var(--font-sx);
+    margin: 0;
+}
