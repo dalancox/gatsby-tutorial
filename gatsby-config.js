@@ -9,8 +9,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `blog`,
-        path: `${__dirname}/blog`,
+        name: `wall-diffuser`,
+        path: `${__dirname}/content/wall-diffuser`,
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `car-diffuser`,
+        path: `${__dirname}/content/car-diffuser`,
       }
     },
     "gatsby-plugin-mdx",
