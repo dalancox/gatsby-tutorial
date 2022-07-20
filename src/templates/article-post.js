@@ -1,18 +1,24 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from "../components/layout"
 
 const ArticlePost = ({ data }) => {
-    const post = data
 
     return (
         <Layout>
-        <p>{data.mdx.frontmatter.date}</p>
-        <MDXRenderer>
-            {data.mdx.body}
-        </MDXRenderer>
+          <div style={{
+              display: `block`,
+              margin: `0 auto`,
+              maxWidth: `var(--size-content)`,
+              padding: `var(--size-gutter)`,
+            }}>
+            <p>{data.mdx.frontmatter.date}</p>
+            <MDXRenderer>
+                {data.mdx.body}
+            </MDXRenderer>
+          </div>
         </Layout>
       )
 }
