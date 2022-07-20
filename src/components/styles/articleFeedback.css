@@ -1,0 +1,31 @@
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+.article-feedback {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 1rem;
+}
+
+.article-feedback textarea {
+    margin: 1rem 0;
+    padding: .25rem 1rem;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.article-submit {
+    width: 100px;
+    height: 35px;
+    background: none;
+    border: 1px solid rgb(104, 208, 243);
+    border-radius: 5px;
+    color: rgb(40, 199, 252);
+}

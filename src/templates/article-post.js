@@ -4,6 +4,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from "../components/layout"
 
+import ArticleFeedback from "../components/articleFeedback"
+
 const ArticlePost = ({ data }) => {
 
     return (
@@ -18,6 +20,7 @@ const ArticlePost = ({ data }) => {
             <MDXRenderer>
                 {data.mdx.body}
             </MDXRenderer>
+            <ArticleFeedback articlePage={data.mdx.frontmatter.title} />
           </div>
         </Layout>
       )
