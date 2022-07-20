@@ -4,8 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const carPost = path.resolve(`./src/templates/car-post.js`)
-  const wallPost = path.resolve(`./src/templates/wall-post.js`)
+  const articlePost = path.resolve(`./src/templates/article-post.js`)
   const result = await graphql(
     `
     query allArticleQuery {
@@ -40,7 +39,7 @@ exports.createPages = async ({ graphql, actions }) => {
     if (post.node.frontmatter.post === 'wall-diffuser') {
       createPage({
         path: `wall-diffuser/${post.node.slug}`,
-        component: carPost,
+        component: articlePost,
         context: {
           slug: `wall-diffuser/${post.node.slug}`,
           id: post.node.id
@@ -49,7 +48,7 @@ exports.createPages = async ({ graphql, actions }) => {
     } else {
       createPage({
         path: `car-diffuser/${post.node.slug}`,
-        component: wallPost,
+        component: articlePost,
         context: {
           slug: `car-diffuser/${post.node.slug}`,
           id: post.node.id

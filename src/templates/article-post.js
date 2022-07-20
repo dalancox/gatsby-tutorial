@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Layout from "../components/layout"
 
-const WallDiffuser = ({ data }) => {
+const ArticlePost = ({ data }) => {
     const post = data
 
     return (
@@ -32,4 +32,4 @@ query ($id: String) {
 }
 `
 
-export default WallDiffuser
+export default ArticlePost
