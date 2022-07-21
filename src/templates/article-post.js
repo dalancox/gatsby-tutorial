@@ -17,6 +17,7 @@ const ArticlePost = ({ data }) => {
               padding: `var(--size-gutter)`,
             }}>
             <p>{data.mdx.frontmatter.date}</p>
+            <h1>{data.mdx.frontmatter.title}</h1>
             <MDXRenderer>
                 {data.mdx.body}
             </MDXRenderer>

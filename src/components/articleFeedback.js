@@ -9,11 +9,6 @@ const ArticleFeedback = ({ articlePage }) => {
     const [disable, setDisable] = useState(false);
     const [accept, setAccept] = useState(false);
 
-    const handleClick = () => {
-        setClick(!click); 
-        disableFeedback();
-    };
-
     const disableFeedback = () => {setDisable(true)}
     const enableAccept = () => {setAccept(true)}
 
@@ -21,6 +16,11 @@ const ArticleFeedback = ({ articlePage }) => {
         e.preventDefault();
         enableAccept();
     }
+
+    const handleClick = () => {
+        setClick(!click); 
+        disableFeedback();
+    };
 
     return (
         <>
