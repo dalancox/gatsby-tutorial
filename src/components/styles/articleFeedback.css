@@ -6,6 +6,31 @@
     display: block;
 }
 
+.thanks {
+    display: none;
+}
+
+.thanks.active {
+    display: block;
+}
+
+.feedback {
+    display: none;
+}
+
+.feedback.active {
+    display: block;
+    background: none;
+    border: none;
+    font-size: var(--font-md);
+    color:rgb(104, 208, 243);
+}
+
+.feedback.active:hover {
+    cursor: pointer;
+    color: rgb(40, 199, 252);;
+}
+
 .article-feedback {
     display: flex;
     flex-direction: column;
@@ -15,7 +40,7 @@
 
 .article-feedback textarea {
     margin: 1rem 0;
-    padding: .25rem 1rem;
+    padding: .5rem 1rem;
     height: 150px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -28,4 +53,10 @@
     border: 1px solid rgb(104, 208, 243);
     border-radius: 5px;
     color: rgb(40, 199, 252);
+}
+
+.article-submit:hover {
+    cursor: pointer;
+    background-color: rgb(104, 208, 243);
+    color: white;
 }

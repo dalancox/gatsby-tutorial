@@ -20,8 +20,8 @@ const ArticlePost = ({ data }) => {
             <MDXRenderer>
                 {data.mdx.body}
             </MDXRenderer>
-            <ArticleFeedback articlePage={data.mdx.frontmatter.title} />
           </div>
+          <ArticleFeedback articlePage={data.mdx.frontmatter.title} />
         </Layout>
       )
 }
