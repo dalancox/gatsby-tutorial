@@ -19,23 +19,19 @@
 }
 
 .feedback.active {
-    display: block;
-    background: none;
-    border: none;
-    font-size: var(--font-md);
-    color:rgb(104, 208, 243);
+    display: flex;
+    margin: 0 1rem;
+    padding: 0;
 }
 
 .feedback.active:hover {
     cursor: pointer;
-    color: rgb(40, 199, 252);;
 }
 
 .article-feedback {
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    margin-top: 1rem;
 }
 
 .article-feedback textarea {

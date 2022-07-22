@@ -1,6 +1,9 @@
 import React from "react"
 import { useState } from "react"
+
 import "./styles/articleFeedback.css"
+import thumbsUp from "../images/thumbs-up-solid.svg";
+import thumbsDown from "../images/thumbs-down-solid.svg";
 
 
 const ArticleFeedback = ({ articlePage }) => {
@@ -22,6 +25,11 @@ const ArticleFeedback = ({ articlePage }) => {
         disableFeedback();
     };
 
+    const handleSuccess = () => {
+        disableFeedback();
+        enableAccept();
+    }
+
     return (
         <>
         <div style={{borderTop: `1px solid #ddd`}}></div>
@@ -31,10 +39,15 @@ const ArticleFeedback = ({ articlePage }) => {
               maxWidth: `var(--size-content)`,
               padding: `var(--size-gutter)`,
         }}>
-            <button onClick={handleClick} className={disable ? "feedback":"feedback active"}>GIVE FEEDBACK ABOUT THIS ARTICLE</button>
+            <div style={{display: `flex`, alignItems: `center`}}>
+                <p style={{margin: `0`}} className={disable ? "feedback":"feedback active"}>What this Article Helpful?</p>
+                <img src={thumbsUp} onClick={handleSuccess} className={disable ? "feedback":"feedback active"} alt="thumbs up" width="25" height="25"></img>
+                <img src={thumbsDown} onClick={handleClick} className={disable ? "feedback":"feedback active"} alt="thumbs down" width="25" height="25"></img>
+            </div>
+            
 
             <div className={click ? "form active":"form"}>
-                <h2>Thank you for the feedback.</h2>
+                <h2 style={{marginBottom: `0`}}>Thank you for letting us know.</h2>
                 <form onSubmit={handleSubmit} className="article-feedback">
                     <input value={articlePage} style={{display: `none`}} /> 
                     <textarea placeholder="How can we make this article more helpful? (Optional)" />
@@ -42,7 +55,7 @@ const ArticleFeedback = ({ articlePage }) => {
                 </form>
             </div>
 
-            <span className={accept ? "thanks active":"thanks"}>Your feedback will be reviewed!</span>
+            <span className={accept ? "thanks active":"thanks"}>Thank you for your feedback.</span>
         </div>
         </>
     )
